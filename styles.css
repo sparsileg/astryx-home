@@ -10,7 +10,7 @@
   --astryx:    #F2C14E;  /* star gold */
   --photyx:    #E4536B;  /* hydrogen-alpha crimson */
   --mindforge: #37D67A;  /* matrix green */
-  --scriptum:  #7C9EF5;  /* ink periwinkle */
+  --collectyx: #7C9EF5;  /* ink periwinkle */
 
   --display: 'Julius Sans One', sans-serif;
   --body:    'IBM Plex Sans', sans-serif;
@@ -31,7 +31,7 @@ body {
 body.accent-astryx    { --accent: var(--astryx); }
 body.accent-photyx    { --accent: var(--photyx); }
 body.accent-mindforge { --accent: var(--mindforge); }
-body.accent-scriptum  { --accent: var(--scriptum); }
+body.accent-collectyx { --accent: var(--collectyx); }
 
 a { color: inherit; }
 
@@ -75,7 +75,7 @@ header {
 .s-astryx    { fill: var(--astryx);    stroke: var(--astryx); }
 .s-photyx    { fill: var(--photyx);    stroke: var(--photyx); }
 .s-mindforge { fill: var(--mindforge); stroke: var(--mindforge); }
-.s-scriptum  { fill: var(--scriptum);  stroke: var(--scriptum); }
+.s-collectyx { fill: var(--collectyx); stroke: var(--collectyx); }
 
 @media (prefers-reduced-motion: no-preference) {
   .constellation .halo { animation: twinkle 4s ease-in-out infinite; }
@@ -110,7 +110,7 @@ main { padding-bottom: 4rem; }
 .card.astryx    { --accent: var(--astryx); }
 .card.photyx    { --accent: var(--photyx); }
 .card.mindforge { --accent: var(--mindforge); }
-.card.scriptum  { --accent: var(--scriptum); }
+.card.collectyx { --accent: var(--collectyx); }
 
 .card h2 {
   font-family: var(--display);
