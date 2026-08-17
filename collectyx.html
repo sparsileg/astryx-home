@@ -91,9 +91,108 @@
   </div>
 
   <div class="cta-row">
-    <span class="btn soon">Web version coming soon</span>
+    <a class="btn primary" href="https://collectyx.astryx.tools">Open Web App</a>
+    <a class="btn tour" href="#releases">Download Desktop App</a>
     <a class="btn quiet" href="https://github.com/sparsileg/collectyx" target="_blank" rel="noopener">GitHub</a>
   </div>
+
+  <section class="detail-section">
+    <h2 class="detail-heading">Feature list</h2>
+    <ul class="feature-list detail-feature-list">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Track your library —</b> <span class="desc">mark books as owned, reading, finished, or on the wishlist.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Log reading progress —</b> <span class="desc">track page or percent complete so you can pick up where you left off.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 11 L5 6 L8 8 L12 3" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>See yearly stats —</b> <span class="desc">totals by month and genre turn a shelf of books into a shape you can see.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M4 6l3 3 3-3M2 12h10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Export &amp; backup —</b> <span class="desc">back up your library at any time, in a format shared between the web and desktop versions.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2 class="detail-heading">Web vs. desktop</h2>
+    <table class="compare-table">
+      <thead>
+        <tr><th></th><th>Web</th><th>Desktop</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Storage</td><td>Browser (IndexedDB)</td><td>SQL database file</td></tr>
+        <tr><td>Access</td><td>Any device, no install</td><td>Installed app</td></tr>
+        <tr><td>Backup risk</td><td>Browser cache clears = data loss</td><td>File deletion/drive failure = data loss</td></tr>
+        <tr><td>Backup method</td><td>Export/backup regularly</td><td>Back up the <code>.db</code> file regularly</td></tr>
+      </tbody>
+    </table>
+    <p class="compare-note">Neither version backs itself up automatically — back up regularly, whichever you use.</p>
+    <p class="compare-note"><strong>Try it, stay, or switch — your call.</strong> Start with the web version to try Collectyx out. Stick with it as long as you like, or migrate your backup to the desktop app anytime for a local SQL database. Same backup format either way, so nothing is lost switching.</p>
+  </section>
+
+  <section class="detail-section releases" id="releases">
+    <h2 class="detail-heading">Download latest release</h2>
+
+    <div class="release-group release-group--tested">
+      <h3>Tested</h3>
+      <p class="release-group__note">Verified installable packages, ready for regular use.</p>
+      <ul class="release-links">
+        <li>
+          <a href="https://github.com/sparsileg/collectyx/releases/latest/download/collectyx-linux-x86_64.deb">
+            Ubuntu / Debian (.deb)
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/sparsileg/collectyx/releases/latest/download/collectyx-windows-x86_64.exe">
+            Windows (.exe)
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="release-group release-group--experimental">
+      <h3>Experimental</h3>
+      <p class="release-group__note">
+        Built but not yet verified on this platform. Use with caution, and back up your data before testing.
+        Found a problem? <a href="https://github.com/sparsileg/collectyx/issues/new">Report it on GitHub</a>.
+      </p>
+      <ul class="release-links">
+        <li>
+          <a href="https://github.com/sparsileg/collectyx/releases/latest/download/collectyx-linux-x86_64.AppImage">
+            Linux AppImage
+          </a>
+          <span class="badge badge--experimental">experimental</span>
+        </li>
+        <li>
+          <a href="https://github.com/sparsileg/collectyx/releases/latest/download/collectyx-linux-x86_64.rpm">
+            Linux RPM
+          </a>
+          <span class="badge badge--experimental">experimental</span>
+        </li>
+        <li>
+          <a href="https://github.com/sparsileg/collectyx/releases/latest/download/collectyx-macos-arm64.dmg">
+            macOS — Apple Silicon (M1/M2/M3...)
+          </a>
+          <span class="badge badge--experimental">experimental</span>
+        </li>
+        <li>
+          <a href="https://github.com/sparsileg/collectyx/releases/latest/download/collectyx-macos-x86_64.dmg">
+            macOS — Intel
+          </a>
+          <span class="badge badge--experimental">experimental</span>
+        </li>
+      </ul>
+    </div>
+
+    <p class="release-all-link">
+      <a href="https://github.com/sparsileg/collectyx/releases/latest">View all release assets on GitHub &rarr;</a>
+    </p>
+  </section>
 </main>
 
 <footer>
