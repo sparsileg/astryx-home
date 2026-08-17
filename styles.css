@@ -142,6 +142,7 @@ main { padding-bottom: 4rem; }
   width: fit-content;
 }
 .learn-more:hover { text-decoration: underline; text-underline-offset: 3px; }
+.learn-more-lg { font-size: 1.23rem; }
 
 .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.25rem; }
 
@@ -376,6 +377,17 @@ main { padding-bottom: 4rem; }
 .dot:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
 .cta-row { margin-top: 3rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+
+/* ---------- Detail page: sub-page links row ---------- */
+
+.subpage-links { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.subpage-links a {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+.subpage-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Detail page: extra sections (feature list, compare table, releases) ---------- */
 
