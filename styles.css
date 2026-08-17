@@ -212,6 +212,12 @@ main { padding-bottom: 4rem; }
   overflow: hidden;
 }
 
+.walkthrough-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .panel-head {
   display: flex;
   justify-content: space-between;
@@ -332,6 +338,10 @@ main { padding-bottom: 4rem; }
 
 .slide { display: none; grid-template-columns: 1fr 1.1fr; gap: 2.25rem; align-items: center; }
 .slide.is-active { display: grid; }
+
+.slide.slide-full.is-active { display: block; }
+.slide-full .mock-panel { width: 100%; }
+.slide-full .slide-text { margin-top: 1.5rem; max-width: 720px; }
 
 @media (prefers-reduced-motion: no-preference) {
   .slide.is-active { animation: slidein 0.3s ease; }
