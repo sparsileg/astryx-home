@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Photyx full feature list — astrophotography pre-processing and filtering.">
+<title>Photyx Feature List — Astryx Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="accent-photyx">
+
+<header class="wrap sub-header">
+  <a class="back-link" href="index.html">&larr; Astryx.tools</a>
+  <h1 class="page-title">Photyx Feature List</h1>
+  <p class="page-subtitle">Astrophotography pre-processing and filtering</p>
+</header>
+
+<main class="wrap">
+
+  <section class="detail-section" style="margin-top: 0;">
+    <h2>Fast Frame Review</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Blink through a session —</b> <span class="desc">play, pause, and step through every sub like a flipbook to spot clouds, trailing, or focus drift at a glance.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Keep or reject with a keystroke —</b> <span class="desc">cull hundreds of frames in minutes instead of hours.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Rejected frames highlighted during blink —</b> <span class="desc">an optional red border makes it obvious which frames won't make the stack as you play through.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Pixel and coordinate readout —</b> <span class="desc">hover any point in a frame for its raw value and sky coordinates, when available.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>Objective Quality Analysis</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Automatic quality scoring —</b> <span class="desc">every frame is measured for star sharpness, roundness, background sky brightness, and star count, so you're not eyeballing hundreds of subs one by one.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Judged against your own data —</b> <span class="desc">frames are compared to the rest of that target's collected data — typically spanning several nights — rather than a fixed universal standard. A wider pool gives the statistics something real to judge against, so one thin night doesn't get unfairly flagged, and a truly bad night stands out clearly against everything else you've gathered on that target.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Conservative by default —</b> <span class="desc">only clear outliers get flagged; borderline frames are left for you or your stacking software to weigh, not silently thrown away.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Know why a frame was rejected —</b> <span class="desc">each rejected frame is labeled by cause — optical (focus/tracking), transparency (thin cloud), or sky brightness (moon/light pollution) — so you can see if a night has a pattern worth fixing.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Visual quality graph —</b> <span class="desc">plot any two metrics across the whole session, click a point to jump straight to that frame.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Sortable results table —</b> <span class="desc">every frame's metrics side by side, so the worst offenders are obvious at a glance.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Override any call —</b> <span class="desc">flip a frame from reject to keep (or back) before committing, no re-running the analysis required.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Adjustable thresholds —</b> <span class="desc">save named profiles with your own cutoffs for sharpness, roundness, and sky brightness, and switch between them per session.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Rejects never touch your originals —</b> <span class="desc">rejected frames are simply moved into a subfolder, never modified or deleted, so nothing is ever truly lost.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>Stacking</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 11 L5 6 L8 8 L12 3" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Automatic alignment —</b> <span class="desc">frames are matched and registered to each other with no manual star-picking.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 11 L5 6 L8 8 L12 3" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Handles meridian flips —</b> <span class="desc">a session that crosses the meridian mid-shoot is detected and aligned correctly rather than producing a smeared stack.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 11 L5 6 L8 8 L12 3" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Outlier rejection during combination —</b> <span class="desc">satellite trails, plane streaks, and cosmic ray hits are statistically excluded rather than baked into the average.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 11 L5 6 L8 8 L12 3" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Quick-look preview, not a final edit —</b> <span class="desc">a fast stacked preview to confirm a session is worth carrying into full processing elsewhere. It's a check on your data, not a production-quality result — final processing still happens in dedicated software.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>Keyword Management</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Full header keyword editor —</b> <span class="desc">view and edit any capture metadata — target, filter, exposure, temperature, coordinates, and more — right from the app.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Batch edits across a whole session —</b> <span class="desc">fix a mislabeled target or filter name on every frame at once instead of one file at a time.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Look up any value on demand —</b> <span class="desc">pull a keyword from the current frame for use in scripted workflows.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Carried through format conversion —</b> <span class="desc">metadata maps across FITS and XISF, so switching formats doesn't mean losing your capture data.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>File Format Support</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M4 6l3 3 3-3M2 12h10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>FITS and XISF, read and write —</b> <span class="desc">the two standard astrophotography formats, both fully supported.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M4 6l3 3 3-3M2 12h10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Convert between them —</b> <span class="desc">load in one format, save in the other, no separate conversion tool needed.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M4 6l3 3 3-3M2 12h10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Color camera support —</b> <span class="desc">one-shot-color (Bayer) frames are recognized and debayered automatically wherever needed.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>Automation &amp; Batch Workflows</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Scriptable macros —</b> <span class="desc">chain culling, analysis, keyword edits, and stacking into a repeatable script instead of clicking through each session by hand.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Every command works both ways —</b> <span class="desc">anything you can type into the console can also be dropped straight into a macro, and vice versa — no separate scripting-only command set to learn.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Real scripting, not just a macro recorder —</b> <span class="desc">conditionals and basic math give macros actual logic, not just a fixed replay of clicks.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Powerful logging —</b> <span class="desc">macros can log their own progress and decisions in detail, so a batch run overnight leaves a trail you can actually check in the morning.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>One-click Quick Launch buttons —</b> <span class="desc">pin your most-used scripts to a bar for instant re-use.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Macro library —</b> <span class="desc">build, name, and reuse a personal collection of scripts across sessions.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="1.5" y="1.5" width="11" height="11" fill="none" stroke="var(--accent)" stroke-width="1.3" rx="1.5"/><path d="M4 7h6M7 4v6" stroke="var(--accent)" stroke-width="1.3"/></svg>
+        <span><b>Console with history —</b> <span class="desc">run commands directly and step back through what you've already tried.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>Analysis History &amp; Sharing</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M4 6l3 3 3-3M2 12h10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Export a session's analysis —</b> <span class="desc">save every frame's quality metrics and pass/reject verdicts as a portable report you can keep or share.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M4 6l3 3 3-3M2 12h10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Reload it later —</b> <span class="desc">bring an exported report back in to review a past session's results without needing the original files on hand.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v8M4 6l3 3 3-3M2 12h10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><b>Log viewer —</b> <span class="desc">check exactly what the app did during a session, filterable by severity, with live auto-tail while it runs.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>Cross-Platform</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Native desktop app —</b> <span class="desc">for Windows, macOS, and Linux — fast, offline-first, works entirely on your own machine.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Selectable themes —</b> <span class="desc">including dark and low-light options for the observatory.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="detail-section">
+    <h2>Data &amp; Backup</h2>
+    <ul class="feature-list detail-feature-list" style="list-style: none;">
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>Local-first —</b> <span class="desc">your settings, macros, and profiles live in a database on your own machine, not someone else's cloud.</span></span>
+      </li>
+      <li>
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="var(--accent)" stroke-width="1.3"/><circle cx="7" cy="7" r="2" fill="var(--accent)"/></svg>
+        <span><b>One-click backup and restore —</b> <span class="desc">right from the Tools menu.</span></span>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Built by <a href="https://github.com/sparsileg">sparsileg</a>
+  </div>
+</footer>
+
+</body>
+</html>
