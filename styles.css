@@ -398,6 +398,11 @@ main { padding-bottom: 4rem; }
   text-decoration: none;
 }
 .subpage-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.subpage-link-soon {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--muted);
+}
 
 /* ---------- Detail page: extra sections (feature list, compare table, releases) ---------- */
 
