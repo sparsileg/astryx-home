@@ -179,7 +179,7 @@ main { padding-bottom: 4rem; }
 
 .hero-body { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.25rem; align-items: center; }
 .hero-copy h2 { font-size: 1.7rem; }
-.hero-copy > p.lede { color: var(--ink); font-size: 1.05rem; max-width: 46ch; }
+.hero-copy > p.lede { color: var(--muted); font-size: 1.05rem; max-width: 46ch; }
 
 .feature-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin: 0.25rem 0; }
 .feature-list li { display: flex; gap: 0.65rem; align-items: flex-start; color: var(--ink); font-size: 0.92rem; }
@@ -210,6 +210,30 @@ main { padding-bottom: 4rem; }
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
+}
+
+.hero-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Coming soon stub page ---------- */
+
+.coming-soon {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.coming-soon h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  color: var(--accent);
 }
 
 .walkthrough-shot {
@@ -343,6 +367,36 @@ main { padding-bottom: 4rem; }
 .slide-full .mock-panel { width: 100%; }
 .slide-full .slide-text { margin-top: 1.5rem; max-width: 720px; }
 
+/* ---------- Walkthrough page: image / nav / text stacked in fixed order ---------- */
+
+.walkthrough-images { position: relative; }
+.walkthrough-image { display: none; }
+.walkthrough-image.is-active { display: block; }
+
+.walkthrough-page .wrap { max-width: 1590px; }
+
+.walkthrough-panel {
+  width: 100%;
+  height: 660px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.walkthrough-panel .walkthrough-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.walkthrough-texts { margin-top: 1.5rem; max-width: 720px; }
+.walkthrough-text { display: none; }
+.walkthrough-text.is-active { display: block; }
+
+@media (max-width: 760px) {
+  .walkthrough-panel { height: 390px; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .slide.is-active { animation: slidein 0.3s ease; }
   @keyframes slidein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
@@ -362,7 +416,7 @@ main { padding-bottom: 4rem; }
   .slide { grid-template-columns: 1fr; }
 }
 
-.slide-controls { display: flex; align-items: center; justify-content: center; gap: 1.25rem; margin-top: 2.5rem; }
+.slide-controls { display: flex; align-items: center; justify-content: center; gap: 1.25rem; margin-top: 1rem; }
 .nav-arrow {
   width: 2.25rem;
   height: 2.25rem;
@@ -464,6 +518,26 @@ main { padding-bottom: 4rem; }
 
 .badge--experimental { color: var(--photyx); border-color: var(--photyx); }
 
+/* ---------- Card link row (feature list / walkthrough / downloads) ---------- */
+
+.card-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.15rem 0 0.35rem;
+}
+.card-links li { display: flex; align-items: center; }
+.card-links a {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 1px;
+}
+.card-links a:hover { color: var(--accent); border-color: var(--accent); }
+
 .release-all-link { margin-top: 1.5rem; }
 .release-all-link a { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); text-decoration: none; }
 .release-all-link a:hover { color: var(--accent); }
@@ -480,3 +554,30 @@ footer {
 }
 footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
 footer a:hover { color: var(--ink); }
+
+/* ---------- Click-to-zoom lightbox ---------- */
+
+.zoomable { cursor: zoom-in; }
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 16, 38, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+body.lightbox-open { overflow: hidden; }
