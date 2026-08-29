@@ -2,33 +2,298 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Astryx walk-through — astrophotography session planning.">
-<title>Astryx Walk-through — Astryx Tools</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Astryx Walkthrough</title>
 <link rel="stylesheet" href="styles.css">
+<script src="nav.js" defer></script>
+<style>
+  /* Page-local styles for the top-nav walkthrough layout.
+     Move into styles.css once reviewed — kept inline here for easy diffing. */
+  .walkthrough-page .wrap { max-width: 1590px; }
+
+  .aw-slide { display: none; }
+  .aw-slide.active { display: block; }
+
+  .aw-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+  .aw-text { flex: 1; }
+  .aw-text p { margin: 0; color: var(--ink); }
+
+  .aw-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .aw-nav button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: none;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .aw-nav button:hover { color: var(--accent); border-color: var(--accent); }
+  .aw-nav button:disabled { opacity: 0.35; cursor: default; border-color: var(--muted); color: var(--muted); }
+  .aw-counter { color: var(--muted); font-family: monospace; min-width: 3.5em; text-align: center; }
+
+  .aw-frame {
+    height: 820px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--panel, #0000);
+  }
+  .aw-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+  .aw-frame.aw-triptych {
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .aw-frame.aw-triptych img { flex: none; width: 100%; max-height: 480px; object-fit: contain; }
+
+  .aw-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .aw-dots span {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--muted);
+    cursor: pointer;
+  }
+  .aw-dots span.active { background: var(--accent); }
+
+  @media (max-width: 720px) {
+    .aw-top { flex-direction: column; }
+    .aw-frame { height: 480px; }
+    .aw-frame.aw-triptych { flex-direction: column; height: auto; }
+    .aw-frame.aw-triptych img { max-height: 280px; }
+  }
+</style>
 </head>
-<body class="accent-astryx">
+<body class="walkthrough-page">
+<div class="wrap">
 
-<header class="wrap sub-header">
-  <a class="back-link" href="index.html">&larr; Astryx.tools</a>
-  <h1 class="page-title">Astryx Walk-through</h1>
-  <p class="page-subtitle">Astrophotography session planning</p>
-</header>
+  <a href="index.html" class="back-link">&larr; Astryx.tools</a>
 
-<main class="wrap">
-  <div class="coming-soon">
-    <h2>Coming Soon</h2>
+  <h1>Astryx Walkthrough</h1>
+
+  <div id="aw-root">
+
+    <div class="aw-slide active" data-slide="1">
+      <div class="aw-top">
+        <div class="aw-text"><p>Astryx is a planning tool for people who image the night sky. Everything from picking a target to reading back what your rig actually did lives in one place, and it runs in your browser or as a native desktop app. Here's a full night, start to finish.</p></div>
+        <div class="aw-nav"><button class="aw-prev" disabled>&larr; Back</button><span class="aw-counter">1 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/010-Where_it_starts.avif" alt="Astryx full window on first load, Target Search view"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="2">
+      <div class="aw-top">
+        <div class="aw-text"><p>Fourteen thousand deep-sky objects, searchable by catalogue designation or common name. Sh2-101, NGC 6857, the Tulip — same object, any of the names you happen to know it by.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">2 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/020-Find_the_target.avif" alt="Target Search with Sh2-101 result"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="3">
+      <div class="aw-top">
+        <div class="aw-text"><p>Or work the other way round: filter by type, size, and magnitude until fourteen thousand objects become the dozen that suit your focal length, your sky, and this month.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">3 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/030-Narrow_the_field.avif" alt="Target Filtering panel with active filters"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="4">
+      <div class="aw-top">
+        <div class="aw-text"><p>Park the candidates on your To Do List. Each one carries a live altitude graph, so the target that climbs high and stays there is obvious without opening anything.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">4 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/040-Build_a_shortlist.avif" alt="To Do List with altitude graphs"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="5">
+      <div class="aw-top">
+        <div class="aw-text"><p>Before committing a night, check whether the target is even worth it this month. Yearly Observability shows the full twelve months at a glance: when it clears your horizon, how long it stays up, and where the moon gets in the way.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">5 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/050-Is_this_even_the_right_season.avif" alt="Yearly Observability chart for Sh2-101"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="6">
+      <div class="aw-top">
+        <div class="aw-text"><p>Then narrow to the night itself. Altitude curve, astronomical twilight, moon rise and set, and your own minimum imaging altitude — all on one timeline, so you know exactly how many usable hours you actually have.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">6 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/060-Is_this_the_right_night.avif" alt="Daily Visibility for Sh2-101"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="7">
+      <div class="aw-top">
+        <div class="aw-text"><p>Viewfinder pulls real sky-survey imagery and overlays your actual field of view — your telescope, your sensor, your framing. Drag the box to recompose; Astryx remembers where you put it.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">7 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/070-What_will_it_look_like.avif" alt="Viewfinder framing box over sky-survey image"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="8">
+      <div class="aw-top">
+        <div class="aw-text"><p>Not sure what to shoot? The Optimizer scores every candidate against altitude, moon separation, and moon phase for a specific night, and ranks them. It will also plan a multi-target night, working out how the available dark hours split between them.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">8 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/080-Let_it_choose.avif" alt="Target Optimizer ranked results"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="9">
+      <div class="aw-top">
+        <div class="aw-text"><p>A night is not just exposure time. Dithers, autofocus runs, downloads, and the meridian flip all take minutes you won't get back. The Sequence Planner accounts for every one of them, so the sub count you plan is the sub count you come home with.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">9 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/090-Budget_the_night.avif" alt="Sequence Planner with overhead sliders and timeline"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="10">
+      <div class="aw-top">
+        <div class="aw-text"><p>Meridian flip timing is derived from the target's own coordinates and transit time, not a flat guess pasted across every target. The gap in your imaging is where it will actually be.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">10 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/100-The_flip_handled.avif" alt="Sequence Planner meridian flip detail"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="11">
+      <div class="aw-top">
+        <div class="aw-text"><p>The night happened. Record it: target, gear, exposure, subs, conditions. Your equipment and locations are already saved, so nothing gets retyped — and nothing in active use can be deleted out from under your history by accident.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">11 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/110-Log_the_night.avif" alt="Imaging Log session entry"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="12">
+      <div class="aw-top">
+        <div class="aw-text"><p>Sessions roll up into projects, and projects into programs. Total integration on a target across every night you've ever pointed at it, without a spreadsheet.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">12 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/120-Watch_it_accumulate.avif" alt="Imaging Projects view with cumulative integration"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="13">
+      <div class="aw-top">
+        <div class="aw-text"><p>Every clear night you used, and every one you didn't, laid out as a year. Streaks, gaps, and the long stretch where the weather won — all visible in one square.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">13 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/130-A_year_at_a_glance.avif" alt="Activity heatmap tab in Imaging Log"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="14">
+      <div class="aw-top">
+        <div class="aw-text"><p>Drop in your ASIAir and PHD2 logs and Astryx reads them together. Not two reports to cross-reference — one account of the night, built from both.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">14 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/140-What_the_rig_actually_did.avif" alt="Log Analysis Combined Report summary"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="15">
+      <div class="aw-top">
+        <div class="aw-text"><p>Guide RMS measured on frames that were actually tracking, with dither settles excluded rather than quietly averaged in. A number you can compare between nights, because it means the same thing every night.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">15 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/150-Guiding_measured_honestly.avif" alt="Guiding section of the Combined Report"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="16">
+      <div class="aw-top">
+        <div class="aw-text"><p>Calibration orthogonality drifting. Dithers biased in one direction instead of mixing. Signal-to-noise falling away at two in the morning when twilight can't be blamed. Astryx surfaces these with the log lines behind them, so a finding is evidence, not a guess.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">16 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/160-The_things_youd_never_spot_yourself.avif" alt="Findings section of the Combined Report"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="17">
+      <div class="aw-top">
+        <div class="aw-text"><p>Where did the night go? Every minute assigned to imaging, dithering, focusing, or flipping — and the remainder shown explicitly rather than hidden. That unexplained twenty minutes is usually the interesting part.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">17 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/170-Time_reconciled.avif" alt="Time Accounting table"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="18">
+      <div class="aw-top">
+        <div class="aw-text"><p>Five themes, including low-light options built for a dark observatory, and colourblind-accessible visuals throughout. Guided tutorials cover every view, and pick up where you left them.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">18 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame aw-triptych">
+        <img class="zoomable" src="astryx_assets/walkthrough/180-Flat_Make_it_yours.webp" alt="Flat theme">
+        <img class="zoomable" src="astryx_assets/walkthrough/180-Light_Make_it_yours.webp" alt="Light theme">
+        <img class="zoomable" src="astryx_assets/walkthrough/180-Matrix_Make_it_yours.webp" alt="Matrix theme">
+      </div>
+    </div>
+
+    <div class="aw-slide" data-slide="19">
+      <div class="aw-top">
+        <div class="aw-text"><p>Your targets, sessions, and settings live in a database on your own machine — not someone else's cloud. Back it up in one click, restore it on another machine, and run the whole thing offline.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">19 / 20</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/190-Yours_on_your_machine.avif" alt="Backup and restore panel"></div>
+    </div>
+
+    <div class="aw-slide" data-slide="20">
+      <div class="aw-top">
+        <div class="aw-text"><p>Plan the night. Frame the target. Budget the time. Log what you caught. Read back what really happened. Astryx is free, runs in your browser, and installs as a desktop app for Windows, macOS, and Linux.</p>
+        <p><a class="cta" href="https://app.astryx.tools">Launch Astryx &rarr;</a></p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">20 / 20</span><button class="aw-next" disabled>Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="astryx_assets/walkthrough/200-Close.avif" alt="Astryx overview, Daily Visibility"></div>
+    </div>
+
+    <div class="aw-dots"></div>
+
   </div>
-</main>
+</div>
 
-<footer>
-  <div class="wrap">
-    Built by <a href="https://github.com/sparsileg">sparsileg</a>
-  </div>
-</footer>
+<script>
+(function () {
+  var root = document.getElementById('aw-root');
+  var slides = Array.prototype.slice.call(root.querySelectorAll('.aw-slide'));
+  var dotsWrap = root.querySelector('.aw-dots');
+  var current = 0;
+
+  slides.forEach(function (_, i) {
+    var d = document.createElement('span');
+    if (i === 0) d.className = 'active';
+    d.addEventListener('click', function () { goTo(i); });
+    dotsWrap.appendChild(d);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+
+  function goTo(i) {
+    if (i < 0 || i >= slides.length) return;
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  root.addEventListener('click', function (e) {
+    if (e.target.classList.contains('aw-next')) goTo(current + 1);
+    if (e.target.classList.contains('aw-prev')) goTo(current - 1);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+  });
+})();
+</script>
 
 </body>
 </html>
