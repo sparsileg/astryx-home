@@ -19,9 +19,39 @@
 </header>
 
 <main class="wrap">
-  <div class="coming-soon">
-    <h2>Coming Soon</h2>
-  </div>
+  <section class="detail-section releases" id="releases" style="margin-top: 0;">
+    <h2 class="detail-heading">Download latest release</h2>
+
+    <div class="release-group release-group--experimental">
+      <h3>Experimental</h3>
+      <p class="release-group__note">
+        These are the first automated builds of the Astryx desktop app
+        and are not yet verified on every platform, so use with
+        caution.  Found a
+        problem? <a href="https://github.com/sparsileg/astryx/issues/new">Report
+        it on GitHub</a>.
+      </p>
+      <ul class="release-links">
+        <li>
+          <a href="https://github.com/sparsileg/astryx/releases/latest/download/astryx-linux-x86_64.deb">
+            Ubuntu / Debian (.deb)
+          </a>
+          <span class="badge badge--experimental">experimental</span>
+        </li>
+        <li>
+          <a href="https://github.com/sparsileg/astryx/releases/latest/download/astryx-windows-x86_64.exe">
+            Windows (.exe)
+          </a>
+          <span class="badge badge--experimental">experimental</span>
+        </li>
+      </ul>
+    </div>
+
+    <p class="release-all-link">
+      <a href="https://github.com/sparsileg/astryx/releases/latest">View
+      all release assets on GitHub &rarr;</a>
+    </p>
+  </section>
 </main>
 
 <footer>
@@ -30,5 +60,6 @@
   </div>
 </footer>
 
+<script src="nav.js"></script>
 </body>
 </html>
