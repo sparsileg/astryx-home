@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Astryx Tools — a small constellation of tools: astrophotography planning and processing, flashcards, and book tracking.">
+<meta name="description" content="Astryx Tools — a small constellation of tools: astrophotography planning and processing, book tracking, personal finance, and flashcards.">
 <title>Astryx Tools</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +14,23 @@
 
 <header class="wrap">
   <h1 class="wordmark">Astryx<span class="tld">.tools</span></h1>
-  <p class="tagline">A small constellation of tools — for the night sky, and for keeping a mind and a library in order.</p>
+  <p class="tagline">A small constellation of tools — for the night sky, and for keeping a library, the household accounts, and a mind in order.</p>
 
-  <svg class="constellation" viewBox="0 0 420 130" role="img" aria-label="Four stars joined into a constellation, one per tool">
-    <line x1="60"  y1="90" x2="170" y2="40"/>
-    <line x1="170" y1="40" x2="265" y2="85"/>
-    <line x1="265" y1="85" x2="365" y2="35"/>
-    <circle class="halo s-astryx"    cx="60"  cy="90"/>
-    <circle class="halo s-photyx"    cx="170" cy="40"/>
-    <circle class="halo s-mindforge" cx="265" cy="85"/>
-    <circle class="halo s-collectyx"  cx="365" cy="35"/>
-    <circle class="star s-astryx"    cx="60"  cy="90"/>
-    <circle class="star s-photyx"    cx="170" cy="40"/>
-    <circle class="star s-mindforge" cx="265" cy="85"/>
-    <circle class="star s-collectyx"  cx="365" cy="35"/>
+  <svg class="constellation" viewBox="0 0 420 130" role="img" aria-label="Five stars joined into a constellation, one per tool">
+    <line x1="40"  y1="90" x2="125" y2="40"/>
+    <line x1="125" y1="40" x2="210" y2="85"/>
+    <line x1="210" y1="85" x2="295" y2="35"/>
+    <line x1="295" y1="35" x2="380" y2="80"/>
+    <circle class="halo s-astryx"    cx="40"  cy="90"/>
+    <circle class="halo s-collectyx" cx="125" cy="40"/>
+    <circle class="halo s-kansha"    cx="210" cy="85"/>
+    <circle class="halo s-photyx"    cx="295" cy="35"/>
+    <circle class="halo s-mindforge" cx="380" cy="80"/>
+    <circle class="star s-astryx"    cx="40"  cy="90"/>
+    <circle class="star s-collectyx" cx="125" cy="40"/>
+    <circle class="star s-kansha"    cx="210" cy="85"/>
+    <circle class="star s-photyx"    cx="295" cy="35"/>
+    <circle class="star s-mindforge" cx="380" cy="80"/>
   </svg>
 </header>
 
@@ -69,6 +72,35 @@
       <p class="secondary-heading">Also in the constellation</p>
       <div class="grid">
 
+        <section class="card collectyx">
+          <h2>Collectyx</h2>
+          <div class="badges"><span class="badge">web &middot; browser storage</span><span class="badge">desktop &middot; local database</span></div>
+          <p>A media collection tracker — track what you've read, what's next, and the library you actually own. Additional media collection tracking, such as movies, will be enabled in the future.</p>
+          <ul class="card-links">
+            <li><a href="collectyx-features.html">Feature List</a></li>
+            <li><a href="collectyx-walkthrough.html">Walkthrough</a></li>
+            <li><a href="collectyx-downloads.html">Downloads</a></li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://collectyx.astryx.tools">Start using it now</a>
+            <a class="btn quiet" href="https://github.com/sparsileg/collectyx" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </section>
+
+        <section class="card kansha">
+          <h2>Kansha</h2>
+          <div class="badges"><span class="badge">desktop &middot; encrypted local book</span></div>
+          <p>Personal finance without the subscription — registers, scheduled bills, reconciling, loans, budgets, and investments with lots and cost basis. Imports your Quicken data, and everything stays encrypted on your own computer.</p>
+          <ul class="card-links">
+            <li><a href="kansha-features.html">Feature List</a></li>
+            <li><a href="kansha-walkthrough.html">Walkthrough</a></li>
+            <li><a href="kansha-downloads.html">Downloads</a></li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/sparsileg/kansha" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </section>
+
         <section class="card photyx">
           <h2>Photyx</h2>
           <div class="badges"><span class="badge">desktop</span></div>
@@ -83,6 +115,9 @@
           </div>
         </section>
 
+      </div>
+      <div class="grid">
+
         <section class="card mindforge">
           <h2>Mindforge</h2>
           <div class="badges"><span class="badge">web</span><span class="badge">pwa</span></div>
@@ -91,21 +126,6 @@
           <div class="actions">
             <a class="btn primary" href="https://mindforge.astryx.tools">Open Mindforge</a>
             <a class="btn quiet" href="https://github.com/sparsileg/mindforge" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </section>
-
-        <section class="card collectyx">
-          <h2>Collectyx</h2>
-          <div class="badges"><span class="badge">web &middot; browser storage</span><span class="badge">desktop &middot; local database</span></div>
-          <p>A media collection tracker — track what you've read, what's next, and the library you actually own. Additional media collection tracking, such as movies, will be enabled in the future.</p>
-          <ul class="card-links">
-            <li><a href="collectyx-features.html">Feature List</a></li>
-            <li><a href="collectyx-walkthrough.html">Walkthrough</a></li>
-            <li><a href="collectyx-downloads.html">Downloads</a></li>
-          </ul>
-          <div class="actions">
-            <a class="btn primary" href="https://collectyx.astryx.tools">Start using it now</a>
-            <a class="btn quiet" href="https://github.com/sparsileg/collectyx" target="_blank" rel="noopener">GitHub</a>
           </div>
         </section>
 

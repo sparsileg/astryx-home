@@ -11,6 +11,7 @@
   --photyx:    #E4536B;  /* hydrogen-alpha crimson */
   --mindforge: #37D67A;  /* matrix green */
   --collectyx: #7C9EF5;  /* ink periwinkle */
+  --kansha:    #EE8A4E;  /* persimmon */
 
   --display: 'Julius Sans One', sans-serif;
   --body:    'IBM Plex Sans', sans-serif;
@@ -32,6 +33,7 @@ body.accent-astryx    { --accent: var(--astryx); }
 body.accent-photyx    { --accent: var(--photyx); }
 body.accent-mindforge { --accent: var(--mindforge); }
 body.accent-collectyx { --accent: var(--collectyx); }
+body.accent-kansha    { --accent: var(--kansha); }
 
 a { color: inherit; }
 
@@ -76,12 +78,14 @@ header {
 .s-photyx    { fill: var(--photyx);    stroke: var(--photyx); }
 .s-mindforge { fill: var(--mindforge); stroke: var(--mindforge); }
 .s-collectyx { fill: var(--collectyx); stroke: var(--collectyx); }
+.s-kansha    { fill: var(--kansha);    stroke: var(--kansha); }
 
 @media (prefers-reduced-motion: no-preference) {
   .constellation .halo { animation: twinkle 4s ease-in-out infinite; }
   .constellation .halo:nth-of-type(2) { animation-delay: 1s; }
   .constellation .halo:nth-of-type(3) { animation-delay: 2s; }
   .constellation .halo:nth-of-type(4) { animation-delay: 3s; }
+  .constellation .halo:nth-of-type(5) { animation-delay: 1.5s; }
   @keyframes twinkle { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.5; } }
 }
 
@@ -111,6 +115,7 @@ main { padding-bottom: 4rem; }
 .card.photyx    { --accent: var(--photyx); }
 .card.mindforge { --accent: var(--mindforge); }
 .card.collectyx { --accent: var(--collectyx); }
+.card.kansha    { --accent: var(--kansha); }
 
 .card h2 {
   font-family: var(--display);
@@ -143,6 +148,8 @@ main { padding-bottom: 4rem; }
 }
 .learn-more:hover { text-decoration: underline; text-underline-offset: 3px; }
 .learn-more-lg { font-size: 1.23rem; }
+.guide-link { margin-top: 1rem; }
+.guide-blurb { color: var(--muted); margin: 0.75rem 0 0; }
 
 .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.25rem; }
 
@@ -194,6 +201,11 @@ main { padding-bottom: 4rem; }
 /* ---------- Secondary row (home) ---------- */
 
 .secondary-row { margin-top: 1.25rem; }
+.secondary-row .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.secondary-row .grid + .grid { margin-top: 1.25rem; }
+@media (max-width: 900px) {
+  .secondary-row .grid { grid-template-columns: 1fr; }
+}
 .secondary-heading {
   font-family: var(--mono);
   font-size: 0.72rem;

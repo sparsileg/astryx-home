@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kansha walk-through — local, private personal finance.">
+<title>Kansha Walkthrough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="nav.js" defer></script>
+<style>
+  /* Page-local styles for the top-nav walkthrough layout.
+     Move into styles.css once reviewed — kept inline here for easy diffing. */
+  .walkthrough-page .wrap { max-width: 1590px; }
+
+  .aw-slide { display: none; }
+  .aw-slide.active { display: block; }
+
+  .aw-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+  .aw-text { flex: 1; }
+  .aw-text p { margin: 0; color: var(--ink); }
+
+  .aw-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .aw-nav button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: none;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .aw-nav button:hover { color: var(--accent); border-color: var(--accent); }
+  .aw-nav button:disabled { opacity: 0.35; cursor: default; border-color: var(--muted); color: var(--muted); }
+  .aw-counter { color: var(--muted); font-family: monospace; min-width: 3.5em; text-align: center; }
+
+  .aw-frame {
+    height: 820px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--panel, #0000);
+  }
+  .aw-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+  .aw-frame.aw-triptych {
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .aw-frame.aw-triptych img { flex: none; width: 100%; max-height: 480px; object-fit: contain; }
+
+  .aw-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .aw-dots span {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--muted);
+    cursor: pointer;
+  }
+  .aw-dots span.active { background: var(--accent); }
+
+  @media (max-width: 720px) {
+    .aw-top { flex-direction: column; }
+    .aw-frame { height: 480px; }
+    .aw-frame.aw-triptych { flex-direction: column; height: auto; }
+    .aw-frame.aw-triptych img { max-height: 280px; }
+  }
+</style>
+</head>
+<body class="walkthrough-page accent-kansha">
+<div class="wrap">
+
+  <a href="index.html" class="back-link">&larr; Astryx.tools</a>
+
+  <h1>Kansha Walkthrough</h1>
+
+  <div id="aw-root">
+
+    <div class="aw-slide active" data-slide="1">
+      <div class="aw-top">
+        <div class="aw-text"><p>Kansha keeps your household accounts on your own computer: checking, savings, cards, loans, and investments in one encrypted book, with no subscription and no account to sign up for. Insights is the home page: net worth at three year-ends, this month's income and spending, what's due in the next two weeks, and whether anything needs attention. Every screen in this walkthrough shows Kansha's built-in sample data.</p></div>
+        <div class="aw-nav"><button class="aw-prev" disabled>&larr; Back</button><span class="aw-counter">1 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/010-Money_at_a_glance.avif" alt="Insights home page with net worth, this month, due soon, and needs attention cards"></div>
+    </div>
+    <div class="aw-slide" data-slide="2">
+      <div class="aw-top">
+        <div class="aw-text"><p>Coming from Quicken? Export one QIF file and Kansha reads your accounts, categories, tags, payees, securities, prices, and every transaction, with both sides of each transfer matched up. Nothing changes until you've seen this summary, and you can test the import first, or take a whole import back out later.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">2 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/020-Bring_your_Quicken_data.avif" alt="Import from Quicken summary with accounts and categories mapped"></div>
+    </div>
+    <div class="aw-slide" data-slide="3">
+      <div class="aw-top">
+        <div class="aw-text"><p>Each account has a register: one transaction per row, the running balance down the right, and the entry line at the bottom. It works entirely from the keyboard. Scheduled and future-dated transactions sit below the line at today in italics, so next week's balance is already in view.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">3 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/030-The_register.avif" alt="Checking account register"></div>
+    </div>
+    <div class="aw-slide" data-slide="4">
+      <div class="aw-top">
+        <div class="aw-text"><p>One paycheck, several destinations. A split divides a transaction across categories and transfers: gross pay, federal and state tax, and part sent straight to savings. Remainder shows a check mark when the lines add up.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">4 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/040-Splits_that_add_up.avif" alt="Split panel under a paycheck in the register"></div>
+    </div>
+    <div class="aw-slide" data-slide="5">
+      <div class="aw-top">
+        <div class="aw-text"><p>Paychecks, rent, and bills come again and again. Make each one a schedule, and Kansha reminds you when it's due or enters it by itself. An estimated bill, like electricity, can follow the average of its last few payments.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">5 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/050-Bills_it_remembers.avif" alt="Reminders list of scheduled transactions"></div>
+    </div>
+    <div class="aw-slide" data-slide="6">
+      <div class="aw-top">
+        <div class="aw-text"><p>When something comes due, it's waiting when you open the book: enter it, skip it, or edit it first. Overdue items are flagged, and an estimate is marked so you check the amount against the real bill.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">6 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/060-Whats_due.avif" alt="Due and overdue dialog with rent, electric bill, and paycheck"></div>
+    </div>
+    <div class="aw-slide" data-slide="7">
+      <div class="aw-top">
+        <div class="aw-text"><p>The Calendar puts every scheduled transaction on the day it falls. Tick Projected balance and each day shows what the account will hold at the end of it: the quickest way to see whether a bill lands before the paycheck that covers it.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">7 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/070-The_month_ahead.avif" alt="Calendar for October with projected balances"></div>
+    </div>
+    <div class="aw-slide" data-slide="8">
+      <div class="aw-top">
+        <div class="aw-text"><p>Reconciling checks an account against its statement. Enter the statement's date and ending balance, tick what it shows, and when the difference reaches zero, finish. From then on you know Kansha and the bank agree up to that date.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">8 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/080-Match_the_statement.avif" alt="Reconciling checking against a September statement"></div>
+    </div>
+    <div class="aw-slide" data-slide="9">
+      <div class="aw-top">
+        <div class="aw-text"><p>Reports cover spending, net worth, investing, and tax. Pick a date range, expand or collapse the categories, and click any amount to see the transactions behind it. Save the reports you run often, and export them to CSV or PDF.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">9 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/090-Where_the_money_went.avif" alt="Income/Expense by Category report for last year"></div>
+    </div>
+    <div class="aw-slide" data-slide="10">
+      <div class="aw-top">
+        <div class="aw-text"><p>The Investments screen shows every holding in every account at today's prices: shares, market value, gain or loss, and the day's change. Price download is optional, and when it's on, only ticker symbols ever leave your computer.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">10 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/100-Every_holding.avif" alt="Investments screen with brokerage and Roth IRA holdings"></div>
+    </div>
+    <div class="aw-slide" data-slide="11">
+      <div class="aw-top">
+        <div class="aw-text"><p>Kansha keeps every lot with its acquisition date and cost basis. When you sell, choose the lots yourself or let the lot method pick them, and capital gains come out right at tax time.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">11 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/110-Sell_the_right_shares.avif" alt="Sell dialog with the lot picker"></div>
+    </div>
+    <div class="aw-slide" data-slide="12">
+      <div class="aw-top">
+        <div class="aw-text"><p>Spent something away from the computer? <code>kansha add</code> records a purchase from a terminal, and entry files can come from a script or a phone. They wait here until you approve them, and one with a category Kansha doesn't know is flagged before it touches your accounts.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">12 / 13</span><button class="aw-next">Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/120-Entries_from_your_phone.avif" alt="Review entries dialog with three entries from a phone"></div>
+    </div>
+    <div class="aw-slide" data-slide="13">
+      <div class="aw-top">
+        <div class="aw-text"><p>The book is encrypted with your passphrase, and Kansha backs it up by itself: when it closes, a few minutes after a change, and before anything big such as an import. Restoring shows the backup beside the current book, account by account, before anything is replaced.</p></div>
+        <div class="aw-nav"><button class="aw-prev">&larr; Back</button><span class="aw-counter">13 / 13</span><button class="aw-next" disabled>Next &rarr;</button></div>
+      </div>
+      <div class="aw-frame"><img class="zoomable" src="kansha_assets/walkthrough/130-Backups_you_can_check.avif" alt="Restore from backup comparing the backup with the current book"></div>
+    </div>
+
+    <div class="aw-dots"></div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('aw-root');
+  var slides = Array.prototype.slice.call(root.querySelectorAll('.aw-slide'));
+  var dotsWrap = root.querySelector('.aw-dots');
+  var current = 0;
+
+  slides.forEach(function (_, i) {
+    var d = document.createElement('span');
+    if (i === 0) d.className = 'active';
+    d.addEventListener('click', function () { goTo(i); });
+    dotsWrap.appendChild(d);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+
+  function goTo(i) {
+    if (i < 0 || i >= slides.length) return;
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  root.addEventListener('click', function (e) {
+    if (e.target.classList.contains('aw-next')) goTo(current + 1);
+    if (e.target.classList.contains('aw-prev')) goTo(current - 1);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+  });
+})();
+</script>
+
+</body>
+</html>
