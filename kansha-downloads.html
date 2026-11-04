@@ -25,18 +25,19 @@
     <div class="release-group release-group--tested">
       <h3>Tested</h3>
       <p class="release-group__note">Verified installable packages,
-      ready for regular use. Version 0.90.0 is the release preview
+      ready for regular use. Latest
+      release: <span id="kansha-version">see GitHub</span>, a preview
       ahead of 1.0.0. Found a
       problem? <a href="https://github.com/sparsileg/kansha/issues/new">Report
       it on GitHub</a>.</p>
       <ul class="release-links">
         <li>
-          <a href="https://github.com/sparsileg/kansha/releases/download/v0.90.0/Kansha_0.90.0_amd64.deb">
+          <a href="https://github.com/sparsileg/kansha/releases/latest/download/Kansha_amd64.deb">
             Ubuntu / Debian (.deb)
           </a>
         </li>
         <li>
-          <a href="https://github.com/sparsileg/kansha/releases/download/v0.90.0/Kansha_0.90.0_x64-setup.exe">
+          <a href="https://github.com/sparsileg/kansha/releases/latest/download/Kansha_x64-setup.exe">
             Windows (.exe)
           </a>
         </li>
@@ -58,5 +59,17 @@
 </footer>
 
 <script src="nav.js"></script>
+<script>
+  // The links above always get the latest release; this shows its
+  // version. If GitHub does not answer, "see GitHub" stays.
+  fetch("https://api.github.com/repos/sparsileg/kansha/releases/latest")
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((rel) => {
+      if (rel.tag_name) {
+        document.getElementById("kansha-version").textContent = rel.tag_name;
+      }
+    })
+    .catch(() => {});
+</script>
 </body>
 </html>
